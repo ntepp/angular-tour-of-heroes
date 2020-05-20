@@ -10,7 +10,7 @@ pipeline {
               steps {
                   sh 'echo "Linting .."'
                   /*sh '/home/ec2-user/.nvm/versions/node/v10.20.1/bin/ng lint'*/
-                  /*sh ' /var/lib/jenkins/.linuxbrew/bin/hadolint Dockerfile'*/
+                  sh '/home/ec2-user/.linuxbrew/bin/hadolint Dockerfile'
               }
          }
 		 stage('Build Docker image') {
