@@ -25,5 +25,11 @@ pipeline {
                   sh 'sh upload_docker.sh'
               }
          }
+         
+         stage('Deployment') {
+              steps {
+                  sh 'sh run_kubernetes.sh'
+              }
+         }
      }
 }
