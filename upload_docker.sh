@@ -5,12 +5,13 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath=jmntepp/angular-tour-of-heroes-1
+dockerHubUser=jmntepp
+dockerpath=${dockerHubUser}/angular-tour-of-heroes-1
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker login &&\
+docker login -u ${dockerHubUser} -p ${env.DOCKER_HUB_PASSWORD} &&\
     docker image tag angular-tour-of-heroes-1 $dockerpath
     
 # Step 3:
