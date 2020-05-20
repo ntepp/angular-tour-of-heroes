@@ -9,7 +9,7 @@ pipeline {
 		 stage('Lint Angular app') {
               steps {
                   sh 'echo "Linting .."'
-                  sh 'ng lint'
+                  ng lint
               }
          }
 		 stage('Build Docker image') {
