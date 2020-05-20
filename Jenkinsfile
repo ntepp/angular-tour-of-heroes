@@ -15,7 +15,7 @@ pipeline {
          }
 		 stage('Build Docker image') {
               steps {
-                  sh "docker build -t angular-tour-of-heroes-1 ."
+                  sh "docker build -t angular-tour-of-heroes ."
                   sh "docker image ls"
               }
          }
