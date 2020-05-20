@@ -8,7 +8,7 @@ dockerpath=jmntepp/angular-tour-of-heroes
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run ntepp-angular-tour-of-heroes --image=jmntepp/angular-tour-of-heroes --port=80
+kubectl run angular-tour-of-heroes --image=jmntepp/angular-tour-of-heroes --port=80
 
 # Step 3:
 # List kubernetes pods
