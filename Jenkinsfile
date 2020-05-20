@@ -9,12 +9,13 @@ pipeline {
 		 stage('Lint Angular app') {
               steps {
                   sh 'echo "Linting .."'
-                  /*sh '/home/ec2-user/.nvm/versions/node/v10.20.1/bin/ng lint'*/
+                  sh 'hadolint Dockerfile'
               }
          }
 		 stage('Build Docker image') {
               steps {
-                  sh run_docker.sh
+                  sh "docker build -t angular-tour-of-heroes-1 ."
+                  sh "docker image ls"
               }
          }
          
