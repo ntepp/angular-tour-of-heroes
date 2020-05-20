@@ -10,7 +10,7 @@ pipeline {
               steps {
                   sh 'echo "Linting .."'
                   /*sh '/home/ec2-user/.nvm/versions/node/v10.20.1/bin/ng lint'*/
-                  /*sh 'hadolint Dockerfile'*/
+                  /*sh ' /var/lib/jenkins/.linuxbrew/bin/hadolint Dockerfile'*/
               }
          }
 		 stage('Build Docker image') {
@@ -22,7 +22,7 @@ pipeline {
          
          stage('Upload Docker image') {
               steps {
-                  sh upload_docker.sh
+                  sh 'sh upload_docker.sh'
               }
          }
      }
