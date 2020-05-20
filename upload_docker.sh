@@ -11,8 +11,8 @@ dockerpath=${dockerHubUser}/angular-tour-of-heroes
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker login -u ${dockerHubUser} -p ${env.DOCKER_HUB_PASSWORD} &&\
-    docker image tag angular-tour-of-heroes $dockerpath
+docker login -u ${dockerHubUser} -p ${DOCKER_HUB_PASSWORD} 
+docker image tag angular-tour-of-heroes $dockerpath
     
 # Step 3:
 # Push image to a docker repository
