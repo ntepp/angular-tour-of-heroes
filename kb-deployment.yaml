@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: angular-tour-of-heroes-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        label-key : label-value  
+    spec:
+      containers:
+        - name: angular-tour-of-heroes-container
+          image: jmntepp/angular-tour-of-heroes
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
