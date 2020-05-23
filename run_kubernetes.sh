@@ -7,6 +7,9 @@
 dockerpath=jmntepp/angular-tour-of-heroes
 
 # Step 2
+
+# Config the context
+sudo /home/ec2-user/bin/kubectl config use-context
 # Run the Docker Hub container with kubernetes
 sudo /home/ec2-user/bin/kubectl run angular-tour-of-heroes --image=jmntepp/angular-tour-of-heroes --port=80
 
