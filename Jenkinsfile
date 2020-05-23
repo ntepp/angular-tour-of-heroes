@@ -14,7 +14,7 @@ pipeline {
          }
 		 stage('Build Docker image') {
               steps {
-                  sh "docker build -t angular-tour-of-heroes ."
+                  sh "docker build -t angular-tour-of-heroes-2 ."
                   sh "docker image ls"
               }
          }
@@ -27,7 +27,10 @@ pipeline {
          
          stage('Deployment') {
               steps {
-                  sh 'sh run_kubernetes.sh' 
+                  sh 'eksctl update cluster --name=eks-capstone-cluster'
+                  /*sh 'kubectl apply -f eks/kb-deployment.yam' 
+                  sh 'kubectl apply -f eks/kb-service.yaml'
+                  sh 'kubectl apply -f eks/kb-loadbalancer.yaml'*/
               }
          }
      }
