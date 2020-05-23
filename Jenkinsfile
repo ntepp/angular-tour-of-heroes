@@ -14,14 +14,14 @@ pipeline {
          }
 		 stage('Build Docker image') {
               steps {
-                  sh "docker build -t angular-tour-of-heroes-2 ."
-                  sh "docker image ls"
+                  /*sh "docker build -t angular-tour-of-heroes-2 ."
+                  sh "docker image ls"*/
               }
          }
          
          stage('Upload Docker image') {
               steps {
-                  sh 'sh upload_docker.sh'
+                  /*sh 'sh upload_docker.sh'*/
               }
          }
          
