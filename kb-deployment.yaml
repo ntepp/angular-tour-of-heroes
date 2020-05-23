@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: capstone-app
-          image:  211825533736.dkr.ecr.us-west-2.amazonaws.com/eks-capstone-cluster:latest
+          image:   ${USER_ID}.dkr.ecr.us-west-2.amazonaws.com/eks-capstone-cluster:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 80
