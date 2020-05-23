@@ -9,6 +9,7 @@ pipeline {
 		 stage('Lint Angular app') {
               steps {
                   sh 'echo "Linting .."'
+                  sh 'ln -s ~/.linuxbrew/Homebrew/bin/brew ~/.linuxbrew/bin'
                   sh 'eval $(~/.linuxbrew/bin/brew shellenv)'
                   /*sh '/home/ec2-user/.nvm/versions/node/v10.20.1/bin/ng lint'*/
                   sh '/home/ec2-user/.linuxbrew/bin/hadolint Dockerfile'
