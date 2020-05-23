@@ -27,7 +27,7 @@ pipeline {
          
          stage('Deployment') {
               steps {
-                  sh 'sh run_kubernetes.sh'
+                  sh 'sh run_kubernetes.sh' 
               }
          }
      }
