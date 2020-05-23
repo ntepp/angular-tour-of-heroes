@@ -14,6 +14,7 @@ pipeline {
          }
 		 stage('Build Docker image') {
               steps {
+                sh 'echo "Building Docker image .."'
                   /*sh "docker build -t angular-tour-of-heroes-2 ."
                   sh "docker image ls"*/
               }
@@ -21,6 +22,7 @@ pipeline {
          
          stage('Upload Docker image') {
               steps {
+              sh 'echo "Uploading Docker image .."'
                   /*sh 'sh upload_docker.sh'*/
               }
          }
