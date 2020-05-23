@@ -27,9 +27,7 @@ pipeline {
          
          stage('Deployment') {
               steps {
-                  sh 'sudo /home/ec2-user/bin/kubectl apply -f eks/kb-deployment.yaml'
-                  sh 'sudo /home/ec2-user/bin/kubectl apply -f eks/kb-service.yaml'
-                  sh 'sudo /home/ec2-user/bin/kubectl apply -f eks/kb-loadbalancer.yaml'
+                  sh 'sh run_kubernetes.sh'
               }
          }
      }
