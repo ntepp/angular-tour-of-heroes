@@ -9,8 +9,8 @@ pipeline {
 		 stage('Lint Angular app') {
               steps {
                   sh 'echo "Linting .."'
-                  sh 'sudo /home/ec2-user/.nvm/versions/node/v10.20.1/bin/ng lint'
-                  /*sh '/home/ec2-user/.linuxbrew/bin/hadolint Dockerfile'*/
+                  /*sh 'sudo /home/ec2-user/.nvm/versions/node/v10.20.1/bin/ng lint'*/
+                  sh 'sudo /home/ec2-user/.linuxbrew/bin/hadolint Dockerfile'
               }
          }
 		 stage('Build Docker image') {
