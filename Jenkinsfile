@@ -27,10 +27,7 @@ pipeline {
          
          stage('Deployment') {
               steps {
-                  sh 'sudo /home/ec2-user/bin/eksctl update cluster --name=eks-capstone-cluster'
-                  /*sh 'kubectl apply -f eks/kb-deployment.yam' 
-                  sh 'kubectl apply -f eks/kb-service.yaml'
-                  sh 'kubectl apply -f eks/kb-loadbalancer.yaml'*/
+                  sh 'sh run_kubernetes.sh'
               }
          }
      }
