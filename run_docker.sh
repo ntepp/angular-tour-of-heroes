@@ -13,4 +13,4 @@ docker image ls
 
 # Step 3: 
 # Run Angular app
-#docker run --name angular-tour-of-heroes-container-2 -d -p 4200:80 angular-tour-of-heroes-2
+docker run --name angular-tour-of-heroes-container-2 -d -p 4200:80 angular-tour-of-heroes-2
