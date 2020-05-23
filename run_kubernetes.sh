@@ -16,4 +16,4 @@ sudo /home/ec2-user/bin/kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-#sudo /home/ec2-user/bin/kubectl port-forward angular-tour-of-heroes 4200:80
+#sudo /home/ec2-user/bin/kubectl angular-tour-of-heroes-78698d85f6-hcs5 4200:80
