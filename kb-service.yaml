@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service-label-key: capstone-app-service 
+  name: capstone-app-service
+spec:
+  type: ClusterIP
+  ports:
+  - name: capstone-app-service
+    port: 80
+    protocol: TCP
+  selector:
+    app: capstone-app    

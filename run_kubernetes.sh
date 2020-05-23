@@ -7,7 +7,6 @@
 dockerpath=jmntepp/angular-tour-of-heroes
 
 # Step 2
-
 # Run the Docker Hub container with kubernetes
 sudo /home/ec2-user/bin/kubectl run angular-tour-of-heroes --image=jmntepp/angular-tour-of-heroes --port=80
 

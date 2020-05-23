@@ -1,17 +1,20 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: angular-tour-of-heroes-deployment
+  name: capstone-app
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: capstone-app
   template:
     metadata:
       labels:
-        label-key : label-value  
+        app : capstone-app  
     spec:
       containers:
-        - name: angular-tour-of-heroes-container
-          image: jmntepp/angular-tour-of-heroes
+        - name: capstone-app
+          image:  211825533736.dkr.ecr.us-west-2.amazonaws.com/eks-capstone-cluster:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 80
